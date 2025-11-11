@@ -14,7 +14,7 @@ public class CrearXMLJAXB {
 
 	public static void main(String[] args) throws IOException {
 		
-		
+		//Si
 		try {
 			List<String> lineas = Files.readAllLines(Paths.get("cotizacion2.txt"));
 			
