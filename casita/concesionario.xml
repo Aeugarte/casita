@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<concesionario>
+  <coche id="1">
+  	<marca>Renault</marca>
+  	<modelo>Megane</modelo>
+  	<precio>16000</precio>
+  </coche>
+  
+  <coche id="2">
+  	<marca>Seat</marca>
+  	<modelo>Toledo</modelo>
+  	<precio>12000</precio>
+  </coche>
+  
+  <coche id="3">
+  	<marca>Suzuki</marca>
+  	<modelo>Vitara</modelo>
+  	<precio>15000</precio>
+  </coche>
+  
+</concesionario>

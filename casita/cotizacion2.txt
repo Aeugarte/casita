@@ -1,0 +1,5 @@
+Telefonica;4,32€
+Banco Santander; 4,56€
+Banco Sabadell;1,95€
+CaixaBank;5,51€
+Ibredrola;13,56€
