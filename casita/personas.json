@@ -1,0 +1,21 @@
+{
+	"personas":[
+		{
+		"dni": "12345678A",
+		"nombre": "Juan Perez",
+		"edad": 30
+		},
+		{
+			"dni": "23456789B",
+			"nombre": "Maria Lopez",
+					"edad": 25
+		},
+		{
+			
+			"dni": "34567890C",
+			"nombre": "Antonio Garcia",
+			"edad": 40	
+		}
+		
+	]
+}

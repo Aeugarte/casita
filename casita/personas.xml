@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> <?xml-model href=""?>
+<personas>
+	<persona>
+		<dni>12345678A</dni>
+		<telefono>612345678</telefono>
+		<email>juan.perez@example.com</email>
+	</persona>
+	
+	<persona>
+		<dni>23456789B</dni>
+		<telefono>623456789</telefono>
+		<email>maria.lopez@example.com</email>
+	</persona>
+	
+	<persona>
+		<dni>34567890C</dni>
+		<telefono>634567890</telefono>
+		<email>antgar@example.com</email>
+	</persona>
+
+</personas>
