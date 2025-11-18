@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<productos>
+    <producto>
+        <color>Usado en buen estado</color>
+        <estado>Azul</estado>
+        <nombre>Camisa de algodon</nombre>
+        <precio>20</precio>
+        <talla>M</talla>
+    </producto>
+    <producto>
+        <color>Nuevo sin etiqueta</color>
+        <estado>Negro</estado>
+        <nombre>Pantalones jeans</nombre>
+        <precio>30</precio>
+        <talla>L</talla>
+    </producto>
+    <producto>
+        <color>Nuevo con etiqueta</color>
+        <estado>Rojo</estado>
+        <nombre>Vestido</nombre>
+        <precio>45</precio>
+        <talla>S</talla>
+    </producto>
+    <producto>
+        <color>Usado en buen estado</color>
+        <estado>Gris</estado>
+        <nombre>Sudadera capucha</nombre>
+        <precio>50</precio>
+        <talla>L</talla>
+    </producto>
+    <producto>
+        <color>Nuevo sin etiqueta</color>
+        <estado>Verde</estado>
+        <nombre>Falda Larga</nombre>
+        <precio>35</precio>
+        <talla>M</talla>
+    </producto>
+    <producto>
+        <color>Usado con defectos</color>
+        <estado>Blanco</estado>
+        <nombre>Zapatillas deportivas</nombre>
+        <precio>60</precio>
+        <talla>42</talla>
+    </producto>
+    <producto>
+        <color>Usado con defectos</color>
+        <estado>Negro</estado>
+        <nombre>Chaqueta de cuero</nombre>
+        <precio>120</precio>
+        <talla>M</talla>
+    </producto>
+    <producto>
+        <color>Nuevo con etiqueta</color>
+        <estado>Blanco</estado>
+        <nombre>Camiseta basica</nombre>
+        <precio>15</precio>
+        <talla>XL</talla>
+    </producto>
+    <producto>
+        <color>Usado en buen estado</color>
+        <estado>Beige</estado>
+        <nombre>Pantalones cortos</nombre>
+        <precio>26</precio>
+        <talla>M</talla>
+    </producto>
+    <producto>
+        <color>Usado con defectos</color>
+        <estado>Marron</estado>
+        <nombre>Botines de cuero</nombre>
+        <precio>90</precio>
+        <talla>39</talla>
+    </producto>
+</productos>
