@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<instituto fecha_exportacion="2025-12-14" nombre="IES Augustobriga">
+  <informacion_exportacion>
+    <titulo>Exportacion de Alumnos - Acceso a Datos</titulo>
+    <descripcion>Listado completo de alumnos exportado desde la base de datos MySQL</descripcion>
+    <autor>Sistema de Gestion Academica</autor>
+  </informacion_exportacion>
+  <alumnos>
+    <alumno id="7">
+      <nombre>Nuevo</nombre>
+      <apellidos>Alumno</apellidos>
+      <edad>20</edad>
+      <email>nuevo@email.com</email>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="4">
+      <nombre>Ana</nombre>
+      <apellidos>Fernández Gómez</apellidos>
+      <edad>22</edad>
+      <email>ana.fernandez@email.com</email>
+      <telefono>644556677</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="9">
+      <nombre>Jaime</nombre>
+      <apellidos>Garcia</apellidos>
+      <edad>20</edad>
+      <email>jaime.garcia@instituto.edu</email>
+      <telefono>600123456</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="1">
+      <nombre>Juan</nombre>
+      <apellidos>García Pérez</apellidos>
+      <edad>20</edad>
+      <email>juan.garcia@email.com</email>
+      <telefono>611223344</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="11">
+      <nombre>Carlos</nombre>
+      <apellidos>Gómez</apellidos>
+      <edad>20</edad>
+      <email>carlos.gómez@instituto.edu</email>
+      <telefono>602345678</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="15">
+      <nombre>Oscar</nombre>
+      <apellidos>Jimenez</apellidos>
+      <edad>20</edad>
+      <email>oscar.jimenez@instituto.edu</email>
+      <telefono>643456780</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="2">
+      <nombre>María</nombre>
+      <apellidos>López Sánchez</apellidos>
+      <edad>21</edad>
+      <email>maria.lopez@email.com</email>
+      <telefono>622334455</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="10">
+      <nombre>María</nombre>
+      <apellidos>Luna</apellidos>
+      <edad>20</edad>
+      <email>maría.luna@instituto.edu</email>
+      <telefono>601234567</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="3">
+      <nombre>Carlos</nombre>
+      <apellidos>Martínez Ruiz</apellidos>
+      <edad>19</edad>
+      <email>carlos.martinez@email.com</email>
+      <telefono>633445566</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="13">
+      <nombre>Francisco</nombre>
+      <apellidos>Moreno</apellidos>
+      <edad>20</edad>
+      <email>francisco.moreno@instituto.edu</email>
+      <telefono>612356789</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="8">
+      <nombre>Alberto</nombre>
+      <apellidos>Rodriguez</apellidos>
+      <edad>19</edad>
+      <email>albetito@gmail.com</email>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="5">
+      <nombre>David</nombre>
+      <apellidos>Rodríguez Díaz</apellidos>
+      <edad>20</edad>
+      <email>david.rodriguez@email.com</email>
+      <telefono>655667788</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="12">
+      <nombre>Lorena</nombre>
+      <apellidos>Sánchez</apellidos>
+      <edad>20</edad>
+      <email>lorena.sánchez@instituto.edu</email>
+      <telefono>603456789</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="6">
+      <nombre>Laura</nombre>
+      <apellidos>Sánchez Martín</apellidos>
+      <edad>21</edad>
+      <email>laura.sanchez@email.com</email>
+      <telefono>666778899</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+    <alumno id="14">
+      <nombre>Ignacio</nombre>
+      <apellidos>Serrano</apellidos>
+      <edad>20</edad>
+      <email>ignacio.serrano@instituto.edu</email>
+      <telefono>688756789</telefono>
+      <fecha_registro>2025-12-14</fecha_registro>
+    </alumno>
+  </alumnos>
+  <estadisticas>
+    <total_alumnos>15</total_alumnos>
+    <fecha_hora_exportacion>14/12/2025 20:01:48</fecha_hora_exportacion>
+  </estadisticas>
+</instituto>

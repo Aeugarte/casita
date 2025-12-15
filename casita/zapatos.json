@@ -1,0 +1,84 @@
+{
+    "zapatos": [
+        {
+            "marca": "Nike",
+            "modelo": "Air Max",
+            "tamano": "42",
+            "color": "Rojo",
+            "stock": 20,
+            "precio": 99.99
+        },
+        {
+            "marca": "Adidas",
+            "modelo": "Ultraboost",
+            "tamano": "44",
+            "color": "Negro",
+            "stock": 15,
+            "precio": 129.99
+        },
+        {
+            "marca": "Puma",
+            "modelo": "RS-X",
+            "tamano": "43",
+            "color": "Blanco",
+            "stock": 10,
+            "precio": 89.99
+        },
+        {
+            "marca": "Reebok",
+            "modelo": "Classic",
+            "tamano": "41",
+            "color": "Azul",
+            "stock": 12,
+            "precio": 74.99
+        },
+        {
+            "marca": "Converse",
+            "modelo": "Chuck Taylor",
+            "tamano": "40",
+            "color": "Negro",
+            "stock": 25,
+            "precio": 59.99
+        },
+        {
+            "marca": "New Balance",
+            "modelo": "574",
+            "tamano": "42",
+            "color": "Gris",
+            "stock": 8,
+            "precio": 79.99
+        },
+        {
+            "marca": "Vans",
+            "modelo": "Old Skool",
+            "tamano": "41",
+            "color": "Blanco",
+            "stock": 18,
+            "precio": 69.99
+        },
+        {
+            "marca": "Fila",
+            "modelo": "Disruptor",
+            "tamano": "44",
+            "color": "Rosa",
+            "stock": 5,
+            "precio": 109.99
+        },
+        {
+            "marca": "Under Armour",
+            "modelo": "HOVR Sonic",
+            "tamano": "43",
+            "color": "Verde",
+            "stock": 7,
+            "precio": 119.99
+        },
+        {
+            "marca": "Asics",
+            "modelo": "Gel Kayano",
+            "tamano": "42",
+            "color": "Amarillo",
+            "stock": 9,
+            "precio": 139.99
+        }
+    ]
+}

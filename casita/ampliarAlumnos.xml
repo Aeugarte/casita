@@ -1,0 +1,37 @@
+<alumnos>
+    <alumno>
+        <nombre>Jaime Garcia</nombre>
+        <curso>1DAM</curso>
+        <telefono>600123456</telefono>
+    </alumno>
+    <alumno>
+        <nombre>María Luna</nombre>
+        <curso>2DAW</curso>
+        <telefono>601234567</telefono>
+    </alumno>
+    <alumno>
+        <nombre>Carlos Gómez</nombre>
+        <curso>1DAW</curso>
+        <telefono>602345678</telefono>
+    </alumno>
+    <alumno>
+        <nombre>Lorena Sánchez</nombre>
+        <curso>2DAM</curso>
+        <telefono>603456789</telefono>
+    </alumno>
+	    <alumno>
+        <nombre>Francisco Moreno</nombre>
+        <curso>2DAW</curso>
+        <telefono>612356789</telefono>
+    </alumno>
+	    <alumno>
+        <nombre>Ignacio Serrano</nombre>
+        <curso>1DAM</curso>
+        <telefono>688756789</telefono>
+    </alumno>
+	    <alumno>
+        <nombre>Oscar Jimenez</nombre>
+        <curso>1DAW</curso>
+        <telefono>643456780</telefono>
+    </alumno>
+</alumnos>
