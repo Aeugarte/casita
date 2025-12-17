@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cursos>
+  <curso>
+    <nombre>Java Avanzado</nombre>
+    <profesor>Ana Garcia</profesor>
+    <horas>40</horas>
+    <precio>270.0</precio>
+  </curso>
+  <curso>
+    <nombre>Android Kotlin</nombre>
+    <profesor>Carlos Lopez</profesor>
+    <horas>60</horas>
+    <precio>350.0</precio>
+  </curso>
+  <curso>
+    <nombre>Base de Datos</nombre>
+    <profesor>Maria Torres</profesor>
+    <horas>30</horas>
+    <precio>180.0</precio>
+  </curso>
+</cursos>

@@ -1,64 +1,58 @@
 package ejercicioFinal;
-import java.sql.*;
+
 import java.util.Scanner;
 
+// Clase con el menú por consola que llama a los métodos de ZapatosBD
 public class Ej2MenuPrincipal {
+
     public static void main(String[] args) {
-        Connection conn = ConexionBD.conectar();
         Scanner sc = new Scanner(System.in);
-        
+        // Creamos el objeto de lógica de negocio para la BD de zapatos
+        ZapatosBD zbd = new ZapatosBD();
+
         try {
-            conn.setCatalog("BDZapaton");
-            
             int opcion;
             do {
+                // Mostrar menú de opciones al usuario
                 System.out.println("\n=== MENÚ ZAPATOS ===");
-                System.out.println("1. Stock < 5");
-                System.out.println("2. +2€ Nike");
-                System.out.println("3. Añadir descripción");
-                System.out.println("4. Rojo y precio < 20");
-                System.out.println("5. Total zapatos");
+                System.out.println("1. Mostrar zapatos con stock < 5");
+                System.out.println("2. Subir 2€ al precio de las Nike");
+                System.out.println("3. Añadir columna descripcion");
+                System.out.println("4. Ver zapatos rojos con precio < 20");
+                System.out.println("5. Mostrar total de zapatos (función SQL)");
                 System.out.println("0. Salir");
                 System.out.print("Opción: ");
                 opcion = sc.nextInt();
-                
-                switch(opcion) {
-                    case 1: // Stock bajo
-                        ResultSet rs1 = conn.createStatement().executeQuery("SELECT * FROM zapato WHERE stock < 5");
-                        while(rs1.next())
-                            System.out.println(rs1.getInt("ID") + ": " + rs1.getString("marca") + " (stock: " + rs1.getInt("stock") + ")");
+
+                // Según la opción, llamamos al método correspondiente
+                switch (opcion) {
+                    case 1:
+                        zbd.stockBajo();
                         break;
-                        
-                    case 2: // Nike +2€
-                        int f2 = conn.createStatement().executeUpdate("UPDATE zapato SET precio = precio + 2 WHERE marca = 'Nike'");
-                        System.out.println("✓ " + f2 + " Nike actualizados");
+                    case 2:
+                        zbd.nikeMas2();
                         break;
-                        
-                    case 3: // Descripción
-                        conn.createStatement().execute("ALTER TABLE zapato ADD descripcion VARCHAR(200)");
-                        System.out.println("✓ Descripción añadida");
+                    case 3:
+                        zbd.addDescripcion();
                         break;
-                        
-                    case 4: // Rojo < 20 (Prepared)
-                        PreparedStatement ps4 = conn.prepareStatement("SELECT * FROM zapato WHERE color = ? AND precio < ?");
-                        ps4.setString(1, "Rojo");
-                        ps4.setDouble(2, 20);
-                        ResultSet rs4 = ps4.executeQuery();
-                        while(rs4.next())
-                            System.out.println(rs4.getString("marca") + " " + rs4.getString("modelo"));
+                    case 4:
+                        zbd.rojoBarato();
                         break;
-                        
-                    case 5: // Total (función ya creada)
-                        CallableStatement cs5 = conn.prepareCall("{? = CALL total_zapatos()}");
-                        cs5.registerOutParameter(1, Types.INTEGER);
-                        cs5.execute();
-                        System.out.println("Total zapatos: " + cs5.getInt(1));
+                    case 5:
+                        zbd.totalZapatos();
                         break;
+                    case 0:
+                        System.out.println("Saliendo del programa...");
+                        break;
+                    default:
+                        System.out.println("Opción no válida.");
                 }
-            } while(opcion != 0);
-            
-        } catch(Exception e) {
+            } while (opcion != 0);
+
+        } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            sc.close();  // Cerramos el scanner al final
         }
     }
 }

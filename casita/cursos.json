@@ -1,0 +1,19 @@
+[ {
+  "nombre" : "Java Avanzado",
+  "profesor" : "Ana Garcia",
+  "horas" : 40,
+  "precio" : 270.0,
+  "modalidad" : null
+}, {
+  "nombre" : "Android Kotlin",
+  "profesor" : "Carlos Lopez",
+  "horas" : 60,
+  "precio" : 350.0,
+  "modalidad" : null
+}, {
+  "nombre" : "Base de Datos",
+  "profesor" : "Maria Torres",
+  "horas" : 30,
+  "precio" : 180.0,
+  "modalidad" : null
+} ]

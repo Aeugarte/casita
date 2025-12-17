@@ -2,59 +2,57 @@ package ejercicioFinal;
 
 import java.sql.*;
 import java.io.*;
+import com.fasterxml.jackson.databind.*;  // Librería Jackson para trabajar con JSON
 
 public class Ejercicio1 {
+
     public static void main(String[] args) {
+        // Abrimos una conexión genérica al servidor MySQL
         Connection conn = ConexionBD.conectar();
-        
+
         try {
-            // 1. Script (ya funciona)
-            BufferedReader br = new BufferedReader(new FileReader("scriptazapatos.sql"));
+            // 1) Leer el script SQL completo desde un fichero
+            BufferedReader br = new BufferedReader(new FileReader("scriptzapatos.sql"));
             String linea, script = "";
-            while((linea = br.readLine()) != null) script += linea + "\n";
+            while ((linea = br.readLine()) != null)
+                script += linea + "\n";
             br.close();
-            
+
+            // 2) Ejecutar el script (crea la BD y la tabla)
             Statement stmt = conn.createStatement();
             stmt.execute(script);
+
+            // Cambiamos el "catálogo" a la BD del ejercicio
             conn.setCatalog("BDZapaton");
-            
-            // 2. LEER zapatos.json REAL [file:107]
-            br = new BufferedReader(new FileReader("zapatos.json"));
-            String json = "";
-            while((linea = br.readLine()) != null) json += linea;
-            br.close();
-            
-            // 3. PARSE SIMPLE (estilo profesor)
-            // Buscar cada "marca": "...", extraer valores
+
+            // 3) Configurar Jackson para leer el JSON
+            ObjectMapper mapper = new ObjectMapper();
+            // Leer el archivo zapatos.json y convertirlo al objeto contenedor
+            ZapatosJson zapatoJson = mapper.readValue(new File("zapatos.json"), ZapatosJson.class);
+
+            // 4) Preparar la sentencia INSERT con parámetros
             PreparedStatement pstmt = conn.prepareStatement(
-                "INSERT INTO zapato (marca,modelo,tamano,color,stock,precio) VALUES (?,?,?,?,?,?)");
-            
-            // Datos del JSON real (10 zapatos)
-            String[][] datosJSON = {
-                {"Nike", "Air Max", "42", "Rojo", "20", "99.99"},
-                {"Adidas", "Ultraboost", "44", "Negro", "15", "129.99"},
-                {"Puma", "RS-X", "43", "Blanco", "10", "89.99"},
-                {"Reebok", "Classic", "41", "Azul", "12", "74.99"},
-                {"Converse", "Chuck Taylor", "40", "Negro", "25", "59.99"},
-                {"New Balance", "574", "42", "Gris", "8", "79.99"},
-                {"Vans", "Old Skool", "41", "Blanco", "18", "69.99"},
-                {"Fila", "Disruptor", "44", "Rosa", "5", "109.99"},
-                {"Under Armour", "HOVR Sonic", "43", "Verde", "7", "119.99"},
-                {"Asics", "Gel Kayano", "42", "Amarillo", "9", "139.99"}
-            };
-            
-            for(String[] zapato : datosJSON) {
-                pstmt.setString(1, zapato[0]);
-                pstmt.setString(2, zapato[1]);
-                pstmt.setString(3, zapato[2]);
-                pstmt.setString(4, zapato[3]);
-                pstmt.setInt(5, Integer.parseInt(zapato[4]));
-                pstmt.setDouble(6, Double.parseDouble(zapato[5]));
-                pstmt.addBatch();
+                "INSERT INTO zapato (marca,modelo,tamano,color,stock,precio) VALUES (?,?,?,?,?,?)"
+            );
+
+            // 5) Recorrer la lista de zapatos del JSON y rellenar el batch
+            for (Zapato zapato : zapatoJson.getZapatos()) {
+                pstmt.setString(1, zapato.getMarca());
+                pstmt.setString(2, zapato.getModelo());
+                pstmt.setString(3, zapato.getTamano());
+                pstmt.setString(4, zapato.getColor());
+                pstmt.setInt(5, zapato.getStock());
+                pstmt.setDouble(6, zapato.getPrecio());
+                pstmt.addBatch();  // Añadimos cada zapato al lote
             }
+
+            // 6) Ejecutar el batch de inserciones de una vez
             pstmt.executeBatch();
-            System.out.println("✓ 10 zapatos del JSON insertados!");
-            
-        } catch(Exception e) { e.printStackTrace(); }
+            System.out.println("Se han insertado " + zapatoJson.getZapatos().size() + " zapatos desde el JSON.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
+

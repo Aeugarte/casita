@@ -1,0 +1,7 @@
+[
+  {"titulo": "Cien años de soledad", "autor": "Gabriel García Márquez", "stock": 15, "precio": 19.99},
+  {"titulo": "El Quijote", "autor": "Miguel de Cervantes", "stock": 8, "precio": 24.50},
+  {"titulo": "1984", "autor": "George Orwell", "stock": 22, "precio": 16.75},
+  {"titulo": "Don Juan Tenorio", "autor": "José Zorrilla", "stock": 3, "precio": 12.00},
+  {"titulo": "La Regenta", "autor": "Leopoldo Alas Clarín", "stock": 7, "precio": 18.90}
+]
